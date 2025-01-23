@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Labs Clone</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS (optional) -->
+   <!-- Add this if the CDN fails -->
+<script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">');
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <body class="dark:bg-gray-900">
+        <!-- Dark Mode Toggle -->
+        <button id="darkModeToggle" class="fixed top-4 right-4 p-2 bg-gray-200 rounded-full">
+          🌞
+        </button>
+      
+        <!-- Navbar -->
+        <nav class="fixed w-full bg-transparent py-6 z-50">
+          <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 dark:text-white">YourLogo</div>
+            <div class="hidden md:flex space-x-8">
+              <a href="#" class="text-gray-600 hover:text-gray-900 dark:text-gray-300">Docs</a>
+              <a href="#" class="text-gray-600 hover:text-gray-900 dark:text-gray-300">Components</a>
+              <a href="#" class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700">Get Started</a>
+            </div>
+          </div>
+        </nav>
+      
+        <!-- Hero Section -->
+        <section class="min-h-screen bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center pt-20">
+          <div class="text-center px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Build Modern Web Interfaces
+            </h1>
+            <p class="text-gray-200 text-xl mb-12 max-w-2xl mx-auto">
+              A design system for developers who want to ship faster.
+            </p>
+            <button class="bg-white text-purple-900 px-8 py-4 rounded-full text-lg hover:scale-105 transition-transform">
+              Explore Components
+            </button>
+          </div>
+        </section>
+      
+        <!-- Features Grid -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800">
+          <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Card 1 -->
+              <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-12 h-12 bg-purple-500 rounded-lg mb-4"></div>
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Modular Components</h3>
+                <p class="text-gray-600 dark:text-gray-300">Reusable, accessible elements.</p>
+              </div>
+              <!-- Card 2 -->
+              <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-12 h-12 bg-pink-500 rounded-lg mb-4"></div>
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Dark Mode</h3>
+                <p class="text-gray-600 dark:text-gray-300">Built-in dark theme support.</p>
+              </div>
+              <!-- Card 3 -->
+              <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg mb-4"></div>
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Responsive</h3>
+                <p class="text-gray-600 dark:text-gray-300">Works on all devices.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+        <!-- Add this script at the end of the body -->
+        <script>
+          // Dark Mode Toggle
+          const darkModeToggle = document.getElementById('darkModeToggle');
+          let isDark = false;
+      
+          darkModeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            document.documentElement.classList.toggle('dark');
+            darkModeToggle.textContent = isDark ? '🌙' : '🌞';
+          });
+        </script>
+      </body>
+      </html>
+</body>
+</html>
